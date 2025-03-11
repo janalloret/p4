@@ -5,8 +5,8 @@ const int ledPin1 = 0; // Pin del primer LED
 const int ledPin2 = 45; // Pin del segon LED
 
 // Definim els intervals de parpelleig en mil·lisegons
-const int interval1 = 500; // 500 ms per al primer LED
-const int interval2 = 1000; // 1000 ms per al segon LED
+const int interval1 = 300; // 300 ms per al primer LED
+const int interval2 = 1500; // 1500 ms per al segon LED
 
 // Funcions de les tasques
 void blinkLed1(void *parameter);
@@ -19,7 +19,7 @@ void setup() {
 
     // Creem la primera tasca per al primer LED
     xTaskCreate(
-        blinkLed1,       // Funció que implementa la tasca
+        blinkLed1,      // Funció que implementa la tasca
         "Blink LED 1",   // Nom de la tasca
         1000,            // Mida de la pila en bytes
         NULL,            // Paràmetre de la tasca
